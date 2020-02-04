@@ -1,14 +1,20 @@
 import React from 'react';
 import './App.css';
+import {connect} from 'react-redux'
 import View from './components/View.js'
-import Search from './'
+import Filter from './components/Filter'
 
 function App() {
   return (
-    <div className="View">
-      <View />
+    <div>
+      <Filter className="Search" />
+      <View className="View" />
     </div>
   );
 }
 
-export default App;
+
+
+const connectedApp = connect(null, {})(App)
+
+export default connectedApp;

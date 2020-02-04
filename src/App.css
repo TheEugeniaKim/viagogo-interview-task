@@ -1,5 +1,6 @@
 * {
   box-sizing: inherit;
+  /* margin: 2%; */
 }
 
 .View {
@@ -14,7 +15,7 @@
   flex-direction: row;
   flex-basis: 100%;
   flex: 1;
-  width: 100%;
+  margin: 1% 10%;
 }
 
 .dateBox {
@@ -32,4 +33,5 @@
   align-self: left;
   padding-left: 5px;
   margin: 5px;
+  background-color: chartreuse;
 }
