@@ -22,8 +22,6 @@ class App extends React.Component {
   }
 }
 
-
-
 const connectedApp = connect(null, {getEvents})(App)
 
 export default connectedApp;

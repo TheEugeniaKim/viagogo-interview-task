@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {filterLocation} from '../redux/actions'
 
 class Filter extends React.Component {
 
@@ -9,7 +10,7 @@ class Filter extends React.Component {
       locations.push(event.VenueCity)
     }
     return locations
-  } // Helper function to 
+  } // filters all the locations from events in state into an array
 
   removeDuplicates(array){
     return array.sort().reduce((accumulator, current) => {
@@ -19,15 +20,17 @@ class Filter extends React.Component {
       }
       return accumulator
     }, [])
-  }
+  } // removes the duplicate cities in an array 
 
   locations = (events) => {
     return this.removeDuplicates(this.getLocations(events))
-  }
+  } // array of cities that will be in the filter
 
-  handleSelect = () => {
-    
-  }
+  handleSelect = (event) => {
+    console.log("selecting")
+    let location = event.target.value
+    return this.props.filterLocation(location)
+  } // event handler sets filterLocation in state 
 
   render(){
 
@@ -40,8 +43,8 @@ class Filter extends React.Component {
         {data}
       </option>
     )
+    console.log("filter", this.props.venueCityFilter)
     return (
-      
       <div className="filter-box">
         <h2 className="filter-header"> Search By Location: </h2>
         <select className="filter-selector" onChange={this.handleSelect}>
@@ -56,10 +59,11 @@ class Filter extends React.Component {
 
 function mapStateToProps(state){
   return {
-    events: state.events
+    events: state.events,
+    venueCityFilter: state.venueCityFilter
   }
 }
 
-const connectedFilter = connect(mapStateToProps, {})(Filter)
+const connectedFilter = connect(mapStateToProps, {filterLocation})(Filter)
 
 export default connectedFilter 
