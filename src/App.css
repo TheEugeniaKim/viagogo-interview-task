@@ -1,6 +1,5 @@
 * {
   box-sizing: inherit;
-  /* margin: 2%; */
 }
 
 .View {
@@ -9,7 +8,7 @@
   width: 80%;
 }
 
-.eventCard {
+.event-card {
   border: 2px solid black;
   display: flex;
   flex-direction: row;
@@ -18,20 +17,26 @@
   margin: 1% 10%;
 }
 
-.dateBox {
+.date-box {
   border-right: 2px solid black;
   flex: 1;
   padding-left: 5px;
 }
 
-.detailsBox {
+.details-box {
   flex: 3;
   padding-left: 5px;
 }
 
-.viewEventBtn {
+.view-event-btn {
   align-self: left;
   padding-left: 5px;
   margin: 5px;
   background-color: chartreuse;
+}
+
+.filter-box {
+  margin: 10px;
+  border: 2px solid black;
+  width: 50%;
 }

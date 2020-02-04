@@ -4,8 +4,8 @@ import {connect} from 'react-redux'
 const EventCard = (props) => {
 
   return (
-    <div className='eventCard'>
-      <div className='dateBox'>
+    <div className='event-card'>
+      <div className='date-box'>
         {props.Day}, {props.Date} 
         <div className='time'> {props.Time} </div>
         <div className="">
@@ -13,12 +13,12 @@ const EventCard = (props) => {
         </div>
       </div>
 
-      <div className='detailsBox'>
+      <div className='details-box'>
         {props.VenueName} - {props.VenueCity}{props.VenueStateProvince} ({props.VenueCountry})
         <br/>
         {props.EventName}
       </div>
-      <button className='viewEventBtn'>View Tickets</button>
+      <button className='view-event-btn'>View Tickets</button>
     </div>
   )
   

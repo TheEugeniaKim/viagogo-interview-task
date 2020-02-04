@@ -1,17 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {json} from '../eventlist'
 import EventCards from './EventCards'
-import {getEvents} from '../redux/actions'
+
+//Container area for where the events are being displayed 
 
 class View extends React.Component {
 
-  componentDidMount(){
-    return this.props.getEvents(json.Items)
-  }
-
   render(){
-    console.log(this.props.events)
     return this.props.events.map(event => {
       return (
         <EventCards 
@@ -29,6 +24,6 @@ function mapStateToProps(state){
   }
 }
 
-const connectedView = connect(mapStateToProps, {getEvents})(View)
+const connectedView = connect(mapStateToProps, {})(View)
 
 export default connectedView
