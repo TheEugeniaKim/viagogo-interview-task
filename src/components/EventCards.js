@@ -24,6 +24,10 @@ const EventCard = (props) => {
   
 }
 
+function mapStateToProps(){
+  return {}
+}
 
+const connectedEventCard = connect(mapStateToProps, {})(EventCard)
 
-export default EventCard
+export default connectedEventCard
