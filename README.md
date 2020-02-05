@@ -17,7 +17,7 @@ Update the design to show the user all the important information that a customer
 # Part 2:
 **Task:** Design and implement a filter that will allow users to filter by location. The filter should have a full list of locations where all locations are visible and allows the user to select a location.
 
-Response: This deliverable is handled in the Filter.js file where the filter dropdown component is built.
+**Response:** This deliverable is handled in the Filter.js file where the filter dropdown component is built. Selecting a city changes the venueCityFilter in state, which affects the events that are rendered in View. 
 
 
 # Part 3: 
