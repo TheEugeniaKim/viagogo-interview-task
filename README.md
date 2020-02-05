@@ -27,3 +27,4 @@ What could you change to improve the filter experience, and why do you think it 
 
 There are many other attributes that a user might want to filter out for their event searches. For example, they may want to filter for a weekend evening, price, or specific dates. They also may want to sort rather than filter because it's easier to compare events side by side. 
 
+In the AdvancedFilter.js file there's a button which I believe should either open up modal with the filter options. I noticed that the viagogo site actually takes it to another page. I would implement react router to have the clicked event send the user to an advanced filter page. 

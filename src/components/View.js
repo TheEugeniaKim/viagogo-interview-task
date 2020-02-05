@@ -7,20 +7,29 @@ import EventCards from './EventCards'
 class View extends React.Component {
 
   render(){
-    return this.props.events.map(event => {
-      return (
-        <EventCards 
-          {...event}
-          key={event.EventId}
-        />
-      )
-    })
+    let eventArray = []
+    this.props.venueCityFilter === null || this.props.venueCityFilter === "Select Location" ? 
+      eventArray = this.props.events
+      : 
+      eventArray = this.props.events.filter(event => event.VenueCity === this.props.venueCityFilter)
+    
+    return (
+      eventArray.map(event => {
+        return (
+          <EventCards 
+            {...event}
+            key={event.EventId}
+          />
+        )
+      })
+    ) 
   }
 }
 
 function mapStateToProps(state){
   return {
-    events: state.events
+    events: state.events,
+    venueCityFilter: state.venueCityFilter
   }
 }
 
