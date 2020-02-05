@@ -33,7 +33,7 @@ class Filter extends React.Component {
   } // event handler sets filterLocation in state 
 
   render(){
-
+    
     let dataArray = this.locations(this.props.events)
     let options = dataArray.map((data,index) => 
       <option
@@ -43,7 +43,7 @@ class Filter extends React.Component {
         {data}
       </option>
     )
-    
+
     return (
       <div className="filter-box">
         <h2 className="filter-header"> Search By Location: </h2>
