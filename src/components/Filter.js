@@ -43,7 +43,7 @@ class Filter extends React.Component {
         {data}
       </option>
     )
-    console.log("filter", this.props.venueCityFilter)
+    
     return (
       <div className="filter-box">
         <h2 className="filter-header"> Search By Location: </h2>

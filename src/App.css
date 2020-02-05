@@ -1,11 +1,8 @@
-* {
-  box-sizing: inherit;
-}
-
 .View {
   border: 2px solid black;
   margin: 5%;
   width: 80%;
+  display: flex;
 }
 
 .event-card {
@@ -35,10 +32,16 @@
   background-color: chartreuse;
 }
 
+.filter-container {
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
 .filter-box {
-  margin: 10px;
   border: 2px solid black;
-  width: 50%;
+  border-radius: 15px;
+  width: 35%;
 }
 
 .filter-header {
@@ -52,7 +55,19 @@
 }
 
 .advanced-search-box {
-margin: 10px;
-border: 2px solid black; 
-width: 50%;
+  border: 2px solid black; 
+  border-radius: 15px;
+  width: 35%;
+}
+
+.adv-search-header {
+  margin: 10px;
+}
+
+.adv-search-btn {
+  justify-content: center;
+  width: 80%;
+  margin: 8px;
+  height: 20px;
+  border-radius: 15px;
 }
