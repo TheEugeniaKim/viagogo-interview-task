@@ -41,8 +41,18 @@
   width: 50%;
 }
 
+.filter-header {
+  margin: 10px; 
+}
+
+.filter-selector {
+  width: 90%;
+  margin: 10px; 
+  height: 20px;
+}
+
 .advanced-search-box {
-  margin: 10px;
-  border: 2px solid black; 
-  width: 50%;
+margin: 10px;
+border: 2px solid black; 
+width: 50%;
 }
