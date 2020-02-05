@@ -27,7 +27,6 @@ class Filter extends React.Component {
   } // array of cities that will be in the filter
 
   handleSelect = (event) => {
-    console.log("selecting")
     let location = event.target.value
     return this.props.filterLocation(location)
   } // event handler sets filterLocation in state 

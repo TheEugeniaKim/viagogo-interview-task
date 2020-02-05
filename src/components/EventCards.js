@@ -8,9 +8,6 @@ const EventCard = (props) => {
       <div className='date-box'>
         {props.Day}, {props.Date} 
         <div className='time'> {props.Time} </div>
-        <div className="">
-
-        </div>
       </div>
 
       <div className='details-box'>
@@ -27,7 +24,6 @@ const EventCard = (props) => {
       </div>
     </div>
   )
-  
 }
 
 function mapStateToProps(){
