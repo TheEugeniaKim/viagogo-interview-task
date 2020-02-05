@@ -16,9 +16,15 @@ const EventCard = (props) => {
       <div className='details-box'>
         {props.VenueName} - {props.VenueCity}{props.VenueStateProvince} ({props.VenueCountry})
         <br/>
-        {props.EventName}
+        {props.EventName} 
+        <br/>
+        <div className="alert">{props.IsCheapestCity ? props.IsCheapestCityContent : null}</div>
+        <div className="alert"> {props.IsSellingFast ? "This Event Is Selling Fast!" : null} </div>
       </div>
-      <button className='view-event-btn'>View Tickets</button>
+      <div className="btn-area">
+        {props.IsLastDateInCity ? <div className="last-date">Last Date!</div> : null} 
+        <button className='view-event-btn'>View Tickets</button>
+      </div>
     </div>
   )
   

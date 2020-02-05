@@ -25,6 +25,21 @@
   padding-left: 5px;
 }
 
+.alert {
+  color: red;
+}
+
+
+
+.last-date {
+  align-self: left;
+  padding-left: 5px;
+  margin: 5px;
+  background-color: lightskyblue;
+  font-size: small;
+  justify-content: center;
+}
+
 .view-event-btn {
   align-self: left;
   padding-left: 5px;
